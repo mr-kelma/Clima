@@ -34,8 +34,11 @@
                                                 </constraints>
                                                 <color key="tintColor" name="weatherColor"/>
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationPressed:" destination="G2G-EZ-0q7" eventType="touchUpInside" id="Gif-dp-44O"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Поиск" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OZ8-LG-JNH">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="OZ8-LG-JNH">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <color key="tintColor" systemColor="labelColor"/>
@@ -51,6 +54,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="tintColor" name="weatherColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="G2G-EZ-0q7" eventType="touchUpInside" id="6uT-jy-w5N"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -122,6 +128,12 @@
                             <constraint firstItem="C6y-xH-sfB" firstAttribute="top" secondItem="eZ5-EB-0up" secondAttribute="top" id="rjv-W7-Hu9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="xut-hX-MIA" id="CiR-fj-NuE"/>
+                        <outlet property="conditionImageView" destination="fg1-AA-IW0" id="qfo-4x-Z7u"/>
+                        <outlet property="searchTextField" destination="OZ8-LG-JNH" id="EiY-bM-cdX"/>
+                        <outlet property="tempratureLabel" destination="2Ec-1G-XE6" id="41C-t2-63k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jW-lp-6QV" sceneMemberID="firstResponder"/>
             </objects>
