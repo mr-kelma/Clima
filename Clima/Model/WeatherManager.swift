@@ -15,12 +15,12 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager {
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=38c493ded4f63e0bf99a6510d66183b2&q="
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=38c493ded4f63e0bf99a6510d66183b2"
     
     var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String) {
-        let urlString = "\(weatherURL)\(cityName)"
+        let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
     }
     
@@ -36,7 +36,7 @@ struct WeatherManager {
             
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    delegate?.didFailWithError(error: error!)
+                    self.delegate?.didFailWithError(error: error!)
                     return
                 }
                 
